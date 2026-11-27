@@ -70,7 +70,10 @@ details p{margin:0 0 16px;color:var(--sub);font-size:14.5px;line-height:1.6}
 .modal.on{display:flex}.modal .box{background:#fff;width:100%;max-width:520px;margin:0 auto;border-radius:20px 20px 0 0;padding:22px 20px 28px;font-size:14px;line-height:1.65;color:#333;max-height:80vh;overflow:auto}
 .modal .box h4{margin:0 0 10px;font-size:17px}.modal button{margin-top:14px;width:100%;padding:14px;border:0;border-radius:12px;background:#222;color:#fff;font-size:15px;font-weight:700}
 .done{display:none;text-align:center;padding:10px 0}.done b{display:block;font-size:20px;margin-bottom:6px;color:var(--pk)}
-</style></head>
+</style><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17144319481"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17144319481');</script>
+</head>
 <body><div class="w">
 
 <header class="hero">
@@ -179,7 +182,7 @@ details p{margin:0 0 16px;color:var(--sub);font-size:14.5px;line-height:1.6}
 <button type="button" onclick="document.getElementById('pm').classList.remove('on')">확인</button></div></div>
 
 <script>
-var API='https://script.google.com/macros/s/AKfycbxhdUFfkY2XqPO-0K_f7DLHugpnAmyLJsvbACQmpS1UsexLciiNTfiA1joyG6BY97BVAA/exec';
+var API='https://script.google.com/macros/s/AKfycbzzpFjtwnqM_R8w2saP7qn5_hNoeGdWNC4akXS0Vtexfi13Y9XqFJdCIEJtCT4bURN1/exec';
 var Q=new URLSearchParams(location.search);
 var SRC=(Q.get('src')||Q.get('utm_source')||'yt').slice(0,40);
 function pv(){document.getElementById('pm').classList.add('on');return false}
@@ -194,7 +197,7 @@ function send(f){
   b.disabled=true;m.textContent='신청 중...';
   var body=JSON.stringify({type:'landing',product:'가슴성형',name:name,phone:tel,agree:true,interest:it?it.value:'',src:SRC,page:location.pathname+'#'+f.id,utm:location.search.slice(0,120)});
   fetch(API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:body}).then(ok,ok);
-  function ok(){m.textContent='';f.querySelectorAll('label,input,.chips,.btn,.trust,h2,.s').forEach(function(e){e.style.display='none'});f.querySelector('.done').style.display='block';}
+  function ok(){m.textContent='';if(!window.__lead){window.__lead=1;try{gtag('event','conversion',{send_to:'AW-17144319481/ftxnCOac-7sdEPmbhu8_',value:1.0,currency:'KRW'});gtag('event','generate_lead',{form_id:f.id,product:'가슴성형'});}catch(x){}}f.querySelectorAll('label,input,.chips,.btn,.trust,h2,.s').forEach(function(e){e.style.display='none'});f.querySelector('.done').style.display='block';}
   return false;
 }
 </script>
